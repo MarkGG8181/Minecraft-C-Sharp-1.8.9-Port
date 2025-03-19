@@ -1,6 +1,4 @@
-﻿using Minecraft1_8_9Port.net.minecraft.client;
-
-namespace Minecraft1_8_9Port;
+﻿namespace Minecraft1_8_9Port.org.apache.logging.log4j;
 
 public class Logger {
     public void info(String message) {
@@ -12,6 +10,10 @@ public class Logger {
     }
     
     public void warn(String message) {
+        Console.WriteLine(message);
+    }
+    
+    public void debug(String message) {
         Console.WriteLine(message);
     }
 }

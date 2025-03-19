@@ -1,8 +1,7 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Minecraft1_8_9Port;
+namespace Minecraft1_8_9Port.com.mojang.authlib.properties;
 
 public class Property
 {

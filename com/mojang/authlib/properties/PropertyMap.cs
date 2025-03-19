@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Minecraft1_8_9Port;
+namespace Minecraft1_8_9Port.com.mojang.authlib.properties;
 
 public class PropertyMap : Dictionary<string, List<Property>>
 {

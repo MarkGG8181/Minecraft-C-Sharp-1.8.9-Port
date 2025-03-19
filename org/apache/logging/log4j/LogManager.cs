@@ -1,4 +1,4 @@
-﻿namespace Minecraft1_8_9Port;
+﻿namespace Minecraft1_8_9Port.org.apache.logging.log4j;
 
 public class LogManager
 {
