@@ -7,4 +7,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="OpenTK" Version="5.0.0-pre.13" />
+      <PackageReference Include="OpenTK.GLControl" Version="4.0.2" />
+      <PackageReference Include="OpenTK.OpenAL" Version="5.0.0-pre.8" />
+    </ItemGroup>
+
 </Project>
