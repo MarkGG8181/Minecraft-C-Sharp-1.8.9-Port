@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using Minecraft1_8_9Port.com.mojang.authlib.properties;
 using Minecraft1_8_9Port.net.minecraft.util;
 
 namespace Minecraft1_8_9Port.net.minecraft.client.main;
