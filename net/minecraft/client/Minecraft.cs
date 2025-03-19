@@ -1,7 +1,9 @@
+using System.Collections.Concurrent;
 using System.Net;
 using Minecraft1_8_9Port.com.mojang.authlib.properties;
 using Minecraft1_8_9Port.net.minecraft.client.main;
 using Minecraft1_8_9Port.net.minecraft.client.resources;
+using Minecraft1_8_9Port.net.minecraft.client.resources.data;
 using Minecraft1_8_9Port.net.minecraft.util;
 using Minecraft1_8_9Port.org.apache.logging.log4j;
 using Minecraft1_8_9Port.org.lwjgl;
@@ -12,7 +14,7 @@ public class Minecraft
 {
     private static Logger logger = LogManager.getLogger();
 
-    //private static ResourceLocation locationMojangPng = new ResourceLocation("textures/gui/title/mojang.png");
+    private static ResourceLocation locationMojangPng = new ResourceLocation("textures/gui/title/mojang.png");
     public static byte[] memoryReserve = new byte[10485760];
 
     private DirectoryInfo fileResourcepacks;
@@ -94,8 +96,8 @@ public class Minecraft
     //public Profiler mcProfiler = new Profiler();
     private long debugCrashKeyPressTime = -1L;
 
-    //private IReloadableResourceManager mcResourceManager;
-    //private IMetadataSerializer metadataSerializer_ = new IMetadataSerializer();
+    private IReloadableResourceManager mcResourceManager;
+    private IMetadataSerializer metadataSerializer_ = new IMetadataSerializer();
     private List<IResourcePack> defaultResourcePacks = new List<IResourcePack>();
     private DefaultResourcePack mcDefaultResourcePack;
     //private ResourcePackRepository mcResourcePackRepository;
@@ -105,10 +107,10 @@ public class Minecraft
     //private TextureMap textureMapBlocks;
     //private SoundHandler mcSoundHandler;
     //private MusicTicker mcMusicTicker;
-    //private ResourceLocation mojangLogo;
+    private ResourceLocation mojangLogo;
     //private MinecraftSessionService sessionService;
     //private SkinManager skinManager;
-    //private Queue < FutureTask<? >> scheduledTasks = Queues. < FutureTask<? >> newArrayDeque();
+    private readonly ConcurrentQueue<Task> scheduledTasks = new ConcurrentQueue<Task>();
     private long field_175615_aJ = 0L;
 
     private Thread mcThread = Thread.CurrentThread;
