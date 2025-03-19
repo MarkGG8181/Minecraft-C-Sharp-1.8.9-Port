@@ -97,7 +97,7 @@ public class Minecraft
     private long debugCrashKeyPressTime = -1L;
 
     private IReloadableResourceManager mcResourceManager;
-    private IMetadataSerializer metadataSerializer_ = new IMetadataSerializer();
+    //private IMetadataSerializer metadataSerializer_ = new IMetadataSerializer();
     private List<IResourcePack> defaultResourcePacks = new List<IResourcePack>();
     private DefaultResourcePack mcDefaultResourcePack;
     //private ResourcePackRepository mcResourcePackRepository;

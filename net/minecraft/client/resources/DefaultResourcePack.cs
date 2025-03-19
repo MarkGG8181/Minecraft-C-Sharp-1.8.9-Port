@@ -73,6 +73,7 @@ public class DefaultResourcePack : IResourcePack
         return defaultResourceDomains;
     }
 
+    /*
     public T getPackMetadata<T>(IMetadataSerializer metadataSerializer, string metadataSectionName)
         where T : IMetadataSection
     {
@@ -81,7 +82,7 @@ public class DefaultResourcePack : IResourcePack
             using (Stream inputstream =
                    new FileStream(this.mapAssets["pack.mcmeta"].FullName, FileMode.Open, FileAccess.Read))
             {
-                return AbstractResourcePack.readMetadata(metadataSerializer, inputstream, metadataSectionName);
+                return AbstractResourcePack.readMetadata<T>(metadataSerializer, inputstream, metadataSectionName);
             }
         }
         catch (Exception)
@@ -89,6 +90,7 @@ public class DefaultResourcePack : IResourcePack
             return default;
         }
     }
+    */
 
     public Bitmap getPackImage()
     {

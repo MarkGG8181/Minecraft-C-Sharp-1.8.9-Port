@@ -12,7 +12,7 @@ public interface IResourcePack
 
     HashSet<string> getResourceDomains();
 
-    T getPackMetadata<T>(IMetadataSerializer metadataSerializer, string metadataSectionName) where T : IMetadataSection;
+    //T getPackMetadata<T>(IMetadataSerializer metadataSerializer, string metadataSectionName) where T : IMetadataSection;
 
     Bitmap getPackImage();
 
