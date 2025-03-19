@@ -56,5 +56,4 @@ public class RegistrySimple<TKey, TValue> : IRegistry<TKey, TValue>
     {
         return GetEnumerator();
     }
-    
 }
